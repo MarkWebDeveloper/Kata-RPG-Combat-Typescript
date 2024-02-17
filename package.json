@@ -1,0 +1,23 @@
+{
+  "name": "kata-rpg-combat-typescript",
+  "version": "1.0.0",
+  "description": "Complete each iteration before reading the next one. 2. It's recommended you perform this kata with a pairing partner and while writing tests.",
+  "main": "app.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkWebDeveloper/Kata-RPG-Combat-Typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkWebDeveloper/Kata-RPG-Combat-Typescript/issues"
+  },
+  "homepage": "https://github.com/MarkWebDeveloper/Kata-RPG-Combat-Typescript#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}
