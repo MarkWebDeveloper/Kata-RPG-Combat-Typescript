@@ -55,4 +55,31 @@ describe('Character', () => {
         expect(joker.health).toBe(1000);
     });
 
+    // Unidad 2
+
+    it('el personaje no puede dañar a sí mismo', () => {
+        batman.attack(batman);
+        expect(batman.health).toBe(1000);
+    });
+
+    it('el puede curar a sí mismo', () => {
+        batman.health = 900;
+        batman.heal(batman);
+        expect(batman.health).toBe(1000);
+    });
+
+    it('cuando el nivel del que ataca - el nivel del defensor >= 5, el daño + 50%', () => {
+        batman.level = 8;
+        joker.level = 2;
+        batman.attack(joker);
+        expect(joker.health).toBe(850);
+    });
+
+    it('cuando el nivel del que ataca - el nivel del defensor >= -5, el daño - 50%', () => {
+        batman.level = 1;
+        joker.level = 6;
+        batman.attack(joker);
+        expect(joker.health).toBe(950);
+    });
+
 });
