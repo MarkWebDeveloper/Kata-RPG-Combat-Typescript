@@ -15,7 +15,14 @@ export class Character {
     }
 
     public attack(character: Character) {
-        let currentDamage = 100
+        // no introducir antes de tiempo
+        let currentDamage = this.baseDamage
+        // no introducir antes de tiempo
+        let levelDifference = character.level - this.level;
+
+        if (character == this) {
+            return
+        }
 
         if (character.health <= currentDamage) {
             character.health = 0
@@ -23,10 +30,23 @@ export class Character {
             return
         }
 
-        character.health = character.health - 100
+        if (levelDifference >= 5) {
+            currentDamage = this.baseDamage / 2;
+        } 
+        
+        if (levelDifference <= -5) {
+            currentDamage = this.baseDamage * 1.5
+        } 
+
+        // mostrar otro método de escribirlo
+        character.health = character.health - currentDamage
     }
 
     public heal(character: Character) {
+        if(character != this) {
+            return
+        }
+
         if (character.health == 0 || character.isAlive == false) {
             return
         }

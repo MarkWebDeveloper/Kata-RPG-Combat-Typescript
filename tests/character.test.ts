@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { Character } from "../main/Character";
 
-describe('Character', () => {
+describe('Character class test', () => {
     let batman: Character;
     let joker: Character;
 
@@ -36,9 +36,9 @@ describe('Character', () => {
     });
 
     it('curar añade 200 unidades de salud', () => {
-        joker.health = 500;
-        batman.heal(joker);
-        expect(joker.health).toBe(700);
+        batman.health = 500;
+        batman.heal(batman);
+        expect(batman.health).toBe(700);
     });
 
     it('no puede curar a un personaje muerto', () => {
@@ -50,9 +50,9 @@ describe('Character', () => {
     });
 
     it('curar no puede superar 1000 unidades de salud', () => {
-        joker.health = 950;
-        batman.heal(joker);
-        expect(joker.health).toBe(1000);
+        batman.health = 950;
+        batman.heal(batman);
+        expect(batman.health).toBe(1000);
     });
 
     // Unidad 2
@@ -62,10 +62,10 @@ describe('Character', () => {
         expect(batman.health).toBe(1000);
     });
 
-    it('el puede curar a sí mismo', () => {
-        batman.health = 800;
-        batman.heal(batman);
-        expect(batman.health).toBe(1000);
+    it('el puede curar solo a sí mismo', () => {
+        joker.health = 800;
+        batman.heal(joker);
+        expect(joker.health).toBe(800);
     });
 
     it('cuando el nivel del que ataca - el nivel del defensor >= 5, el daño + 50%', () => {
