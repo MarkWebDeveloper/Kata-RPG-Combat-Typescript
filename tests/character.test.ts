@@ -35,10 +35,10 @@ describe('Character', () => {
         expect(joker.isAlive).toBe(false);
     });
 
-    it('curar añade 100 unidades de salud', () => {
+    it('curar añade 200 unidades de salud', () => {
         joker.health = 500;
         batman.heal(joker);
-        expect(joker.health).toBe(600);
+        expect(joker.health).toBe(700);
     });
 
     it('no puede curar a un personaje muerto', () => {
@@ -63,7 +63,7 @@ describe('Character', () => {
     });
 
     it('el puede curar a sí mismo', () => {
-        batman.health = 900;
+        batman.health = 800;
         batman.heal(batman);
         expect(batman.health).toBe(1000);
     });
