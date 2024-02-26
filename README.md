@@ -55,3 +55,9 @@ Retrospective
     - What have you learned? Any new technique or pattern? 
     - Share your design with others, and get feedback on different approaches.
 ```
+
+## Dependencias
+
+- Vite - [https://vitejs.dev/]
+- Vitest - [https://vitest.dev/]
+- Typescript - [https://www.typescriptlang.org/]

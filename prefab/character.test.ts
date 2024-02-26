@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { Character } from "../main/Character";
+import { Character } from "./Character";
 
 describe('Character class test', () => {
     let batman: Character;

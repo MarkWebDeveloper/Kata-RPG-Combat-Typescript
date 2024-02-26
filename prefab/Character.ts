@@ -43,6 +43,7 @@ export class Character {
     }
 
     public heal(character: Character) {
+        // luego juntar este y el siguiente
         if(character != this) {
             return
         }
